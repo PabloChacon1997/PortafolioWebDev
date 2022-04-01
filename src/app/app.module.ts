@@ -11,6 +11,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 
+/** Typewritter Effect */
+import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
+
 
 
 @NgModule({
@@ -23,6 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatGridListModule,
     MatCardModule,
     MatIconModule,
+    AngularTypewriterEffectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

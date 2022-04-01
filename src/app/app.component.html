@@ -1,16 +1,18 @@
-<div style="width:100%;background-color: #A9A9A9;height: 100%;padding-top: 10px;">
+<!-- <div style="width:100%;background-color: #A9A9A9;height: 100%;padding-top: 10px;"> -->
+<div class="container">
+  <!-- style="background-color: gray; width: 90%;margin: auto;height: 100%;border-radius: 10px;padding: auto;" -->
   <mat-grid-list 
-    style="background-color: gray; width: 90%;margin: auto;height: 100%;border-radius: 10px;padding: auto;"
+    class="grid-list"
     cols="3" 
     rowHeight="90px">
     <mat-grid-tile colspan="1" rowspan="6">
       <div>
         <mat-card class="example-card">
-          <mat-card-header>
+          <!-- <mat-card-header>
             <mat-card-title style="color: white;">Pablo Andrés Chacón</mat-card-title>
             <mat-card-subtitle style="color: white;">Front Dev, Web Dev</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content style="padding: auto;margin: auto;">
+          </mat-card-header> -->
+          <mat-card-content style="padding: auto;margin: auto;align-items: center;">
             <img 
               mat-card-image 
               style="border-radius: 20px;height: 300px;width: 250px;" 
@@ -36,8 +38,51 @@
         </mat-card>
       </div>
     </mat-grid-tile>
-    <mat-grid-tile colspan="2">
-      <h1>Presentación</h1>
+    <mat-grid-tile colspan="2" rowspan="5">
+      <div style="margin-top: 50px;">
+        <mat-card style="background-color: gray;height: 20rem;">
+          <p style="font-size: 3rem; color: #C0C0C0;">
+            Hola, Soy
+          </p>
+          <br>
+          <br>
+          <p style="font-size: 3rem;color: #C0C0C0;">
+            Pablo Andrés Chacón
+          </p>
+          <hr>
+          <br>
+          <p style="font-size: 5rem;color: #DCDCDC;">
+            Front-End
+          </p>
+          <br>
+          <br>
+          <p style="font-size: 5rem;color: #DCDCDC;">
+            Developer
+          </p>
+          
+        </mat-card>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <h1 style="font-weight: bold;font-size: 3rem;color: #2F4F4F;">Conocimientos</h1>
+      <br>
+      <div *ngFor="let item of [1,2,3,4,5,6]">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Nombre</mat-card-title>
+            <mat-card-content>
+              <img 
+                mat-card-image 
+                style="border-radius: 20px;height: 300px;width: 250px;" 
+                src="../assets/img/CV_imagen.jpeg" 
+                alt="Imagen de perfil"
+              />
+            </mat-card-content>
+          </mat-card-header>
+        </mat-card>
+      </div>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

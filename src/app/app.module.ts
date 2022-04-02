@@ -10,6 +10,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 /** Typewritter Effect */
 import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
@@ -27,6 +30,8 @@ import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
     MatCardModule,
     MatIconModule,
     AngularTypewriterEffectModule,
+    MatButtonModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

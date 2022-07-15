@@ -12,7 +12,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 /** Typewritter Effect */
 import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
@@ -32,6 +33,8 @@ import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
     AngularTypewriterEffectModule,
     MatButtonModule,
     MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

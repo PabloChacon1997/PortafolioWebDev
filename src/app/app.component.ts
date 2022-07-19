@@ -20,6 +20,41 @@ export class AppComponent {
     console.log('Aki');
     this.dialog.open(DialogMycontent);
   }
+
+  tecnologias: Tech[] = [
+    {
+      nombre: 'HTML',
+      imagen: "html5.webp"
+    },
+    {
+      nombre: 'JavaScript',
+      imagen: "javascript.png"
+    },
+    {
+      nombre: 'CSS',
+      imagen: "CSS3.jpg"
+    },
+    {
+      nombre: 'Angular 8+',
+      imagen: "angular.png"
+    },
+    {
+      nombre: 'MySQL',
+      imagen: "mysql.png"
+    },
+    {
+      nombre: 'MongoDB',
+      imagen: "mongodb.jpg"
+    },
+    {
+      nombre: 'Node.js',
+      imagen: "node.png"
+    },
+    {
+      nombre: 'PostgrSQL',
+      imagen: "postgres.png"
+    },
+  ]
 }
 
 

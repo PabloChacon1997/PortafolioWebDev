@@ -1,6 +1,6 @@
-<div class="container bg-color">
-  <mat-grid-list class="bg-color" cols="1" rowHeight="500px">
-    <mat-grid-list cols="2" rowHeight="450px">
+<div class="container">
+  <mat-grid-list cols="1" rowHeight="500px">
+    <mat-grid-list cols="2" rowHeight="480px">
       <mat-grid-tile>
         <mat-card class="card">
           <mat-card-content>
@@ -37,8 +37,20 @@
       </mat-grid-tile>
     </mat-grid-list>
   </mat-grid-list>
-  <mat-grid-list style="background-color: blue;" cols="1" rowHeight="500px">
-    <div>Tecnologías</div>
+  <mat-grid-list  cols="4" rowHeight="250px">
+    <p class="tech-titulo">Tecnologías</p>
+    <mat-grid-tile *ngFor="let tecnologia of tecnologias">
+      <div class="tech" >
+        <mat-card class="card-tech">
+          <mat-card-content>
+            <img class="img-tech" [src]='"../assets/programming/"+tecnologia.imagen' alt="Foto Presentación" />
+          </mat-card-content>
+          <mat-card-footer>
+            <h3>{{ tecnologia.nombre }}</h3>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      </mat-grid-tile>
   </mat-grid-list>
   <mat-grid-list style="background-color: aquamarine;" cols="1" rowHeight="600px">
     <div>Mis Proyectos</div>

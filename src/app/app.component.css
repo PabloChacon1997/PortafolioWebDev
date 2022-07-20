@@ -93,3 +93,47 @@ mat-grid-list .tech-titulo {
   height: 90px;
   border-radius: 10px;
 }
+
+.proyects {
+  text-align: center;
+}
+
+
+.proyects-titulo {
+  margin-top: 30px;
+  font-weight: bold;
+  color: whitesmoke;
+  font-size: 3rem;
+  padding-top: 20px;
+}
+
+mat-grid-list > .proyects > .proyects-titulo {
+  text-align: center;
+}
+
+.card-header-proyect >h3 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.card-proyects {
+  background-color: gray;
+  border-radius: 10px;
+  border-color: white;
+  margin-top: 30px;
+  width: 80%;
+}
+
+.img-proyects {
+  margin: 10px;
+  width: 200px;
+  height: 110px;
+  border-radius: 10px;
+}
+
+.card-proyects > mat-card-footer > p > a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}

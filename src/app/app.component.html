@@ -43,7 +43,7 @@
       <div class="tech" >
         <mat-card class="card-tech">
           <mat-card-content>
-            <img class="img-tech" [src]='"../assets/programming/"+tecnologia.imagen' alt="Foto Presentación" />
+            <img class="img-tech" [src]='"../assets/programming/"+tecnologia.imagen' [alt]="tecnologia.nombre" />
           </mat-card-content>
           <mat-card-footer>
             <h3>{{ tecnologia.nombre }}</h3>
@@ -52,8 +52,25 @@
       </div>
       </mat-grid-tile>
   </mat-grid-list>
-  <mat-grid-list style="background-color: aquamarine;" cols="1" rowHeight="600px">
-    <div>Mis Proyectos</div>
+  <mat-grid-list class="proyects" cols="3" rowHeight="450px">
+    <p class="proyects-titulo">Proyectos</p>
+    <mat-grid-tile *ngFor="let proyecto of proyectos">
+      <div class="proyects" >
+        <mat-card class="card-proyects">
+          <mat-card-header class="card-header-proyect">
+            <h3>{{ proyecto.nombre }}</h3>
+          </mat-card-header>
+          <mat-card-content>
+            <img class="img-proyects" src='../assets/img/CV_imagen.jpeg' alt="Foto Presentación" />
+          </mat-card-content>
+          <mat-card-footer>
+            <p>{{ proyecto.descripcion }}</p>
+            <hr>
+            <p><a [href]="proyecto.urlGithub">Gihub</a></p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      </mat-grid-tile>
   </mat-grid-list>
   <mat-grid-list style="background-color: blueviolet;" cols="1" rowHeight="400px">
     <div>Contacto</div>

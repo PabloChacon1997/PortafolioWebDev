@@ -10,4 +10,5 @@ export interface Jobs {
   nombre: string,
   imagen: string,
   urlGithub: string,
+  descripcion: string,
 }

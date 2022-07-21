@@ -137,3 +137,57 @@ mat-grid-list > .proyects > .proyects-titulo {
   font-weight: bold;
   color: white;
 }
+
+
+.contact {
+  background-color: #2b3038;
+  text-align: center;
+}
+
+.contact-titulo {
+  margin-top: 30px;
+  font-weight: bold;
+  color: whitesmoke;
+  font-size: 3rem;
+  padding-top: 20px;
+}
+
+.contact-form {
+  margin-top: 5px;
+}
+
+.mat-form-field {
+  color: white;
+  border-color: antiquewhite;
+  margin: 20px;
+  font-size: 15px;
+  width: 50%;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.label-contact {
+  color: white;
+}
+
+.input-contact {
+  color: white;
+}
+
+.example-button-row {
+  display: table-cell;
+  margin-left: 50px;
+  width: 500pc;
+}
+
+.example-button-row > input {
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: gray;
+  border-color: gray;
+  color: white;
+  font-size: 2rem;
+  width: 50%;
+}

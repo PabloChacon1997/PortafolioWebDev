@@ -31,7 +31,7 @@
           <h1>Front-End Developer</h1>
           <section>
             <button mat-button>Descargar CV</button>
-            <button mat-stroked-button>Sobre mí</button>
+            <button (click)="openDialog()" mat-stroked-button>Sobre mí</button>
           </section>
         </div>
       </mat-grid-tile>
@@ -72,7 +72,24 @@
       </div>
       </mat-grid-tile>
   </mat-grid-list>
-  <mat-grid-list style="background-color: blueviolet;" cols="1" rowHeight="400px">
-    <div>Contacto</div>
+  <mat-grid-list class="contact" cols="1" rowHeight="500px">
+    <p class="contact-titulo">Contacto</p>
+    <form action="" class="contact-form">
+      <mat-form-field class="contact-field" appearance="outline">
+        <mat-label >Nombre</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="contact-field" appearance="outline">
+        <mat-label >Email</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="contact-field" appearance="outline">
+        <mat-label >Mensaje</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <div class="example-button-row">
+        <input type="button" mat-button value="Enviar" />
+      </div>
+    </form>
   </mat-grid-list>
 </div>

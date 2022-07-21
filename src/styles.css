@@ -8,3 +8,31 @@ body {
   background: rgb(163,156,166);
   background: linear-gradient(270deg, rgba(163,156,166,0.8743872549019608) 3%, rgba(44,47,48,1) 95%);
 }
+
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+  color: white;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+}
+
+.mat-form-field.mat-focused
+.mat-form-field-label {
+  color: gray;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: gray;
+}
+
+.mat-input-element {
+  caret-color: white;
+}
+
+.mat-form-field-label {
+  color: white;
+}
+

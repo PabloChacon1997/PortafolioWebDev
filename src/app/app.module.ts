@@ -18,6 +18,8 @@ import { MatInputModule } from '@angular/material/input';
 /** Typewritter Effect */
 import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
 
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

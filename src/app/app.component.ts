@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Jobs, Tech } from './interfaces/interfaces';
+import { IContact, Jobs, Tech } from './interfaces/interfaces';
 
 
 @Component({
@@ -14,12 +14,20 @@ export class AppComponent {
   presentacionY: string[] = ['y '];
   presentacionWeb: string[] = ['Web Developer'];
 
+
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
-    console.log('Aki');
     this.dialog.open(DialogMycontent);
   }
+
+
+  constactForm: IContact = {
+    nombre: '',
+    email: '',
+    mensaje: ''
+  }
+
 
   tecnologias: Tech[] = [
     {
@@ -77,6 +85,12 @@ export class AppComponent {
     },
   ];
 
+
+
+  submitForm() {
+    // TODO: Enviar correo
+    console.log(this.constactForm);
+  }
 
 }
 

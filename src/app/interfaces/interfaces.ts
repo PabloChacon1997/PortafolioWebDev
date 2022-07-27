@@ -12,3 +12,9 @@ export interface Jobs {
   urlGithub: string,
   descripcion: string,
 }
+
+export interface IContact {
+  nombre: string,
+  email: string,
+  mensaje: string,
+}

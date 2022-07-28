@@ -1,6 +1,6 @@
 <div class="container">
-  <mat-grid-list cols="1" rowHeight="500px">
-    <mat-grid-list cols="2" rowHeight="480px">
+  <mat-grid-list id="cabecera" cols="1" rowHeight="500px">
+    <mat-grid-list id="subcabecera" cols="2" rowHeight="480px">
       <mat-grid-tile>
         <mat-card class="card">
           <mat-card-content>
@@ -30,7 +30,7 @@
           <hr/>
           <h1>Front-End Developer</h1>
           <section>
-            <button mat-button>Descargar CV</button>
+            <button mat-button (click)="downloadFile()">Descargar CV</button>
             <button (click)="openDialog()" mat-stroked-button>Sobre mí</button>
           </section>
         </div>

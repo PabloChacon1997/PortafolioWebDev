@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { IContact, Jobs, Tech } from './interfaces/interfaces';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +14,20 @@ export class AppComponent {
   presentacionWeb: string[] = ['Web Developer'];
 
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog ) {
+
+  }
+
+  downloadFile() {
+    const downloadInstance = document.createElement('a');
+    downloadInstance.href = 'http://localhost:4200/assets/CV.pdf';
+    downloadInstance.target = '_blank';
+    downloadInstance.download = 'CV Andres Chacon';
+
+    document.body.appendChild(downloadInstance);
+    downloadInstance.click();
+    document.body.removeChild(downloadInstance);
+  }
 
   openDialog() {
     this.dialog.open(DialogMycontent);

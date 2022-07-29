@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { IContact, Jobs, Tech } from './interfaces/interfaces';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ export class AppComponent {
   presentacionSoy: string[] = ['Soy Front-End Developer'];
   presentacionY: string[] = ['y '];
   presentacionWeb: string[] = ['Web Developer'];
-
+  
+  // https://formsubmit.co/el/haxicu
 
   constructor(public dialog: MatDialog ) {
 
@@ -99,9 +101,15 @@ export class AppComponent {
 
 
 
-  submitForm() {
-    // TODO: Enviar correo
-    console.log(this.constactForm);
+  async submitForm(e: Event) {
+    e.preventDefault();
+    emailjs.sendForm('service_85dvzdn', 'template_6om45ua', e.target as HTMLFormElement, 'Ngp4-jMfBWtkGCyeW')
+      .then( (result: EmailJSResponseStatus) => {
+        alert('Mensaje enviado correctamente. Me pondre en contacto con usted lo antes posible. Gracias');
+        this.constactForm.email = '';
+        this.constactForm.nombre = '';
+        this.constactForm.mensaje = '';
+      }).catch(err => console.log(err));
   }
 
 }

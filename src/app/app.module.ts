@@ -15,6 +15,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 /** Typewritter Effect */
 import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
 
@@ -37,7 +41,8 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

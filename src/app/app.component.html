@@ -1,43 +1,45 @@
 <div class="container">
-  <mat-grid-list id="cabecera" cols="1" rowHeight="500px">
-    <mat-grid-list id="subcabecera" cols="2" rowHeight="480px">
-      <mat-grid-tile>
-        <mat-card class="card">
-          <mat-card-content>
-            <img class="img_cv" src="../assets/img/CV_imagen.jpeg" alt="Foto Presentación" />
-          </mat-card-content>
-          <mat-card-footer>
-            <h3>Datos</h3>
+  <mat-grid-list id="cabecera" [cols]="colCabecera" [rowHeight]="rowHeightCabecera">
+    <mat-grid-list id="subcabecera" [cols]="colSubCabecera" [rowHeight]="rowHeightSubCabecera">
+      <div>
+        <mat-grid-tile>
+          <mat-card class="card">
+            <mat-card-content>
+              <img class="img_cv" src="../assets/img/CV_imagen.jpeg" alt="Foto Presentación" />
+            </mat-card-content>
+            <mat-card-footer>
+              <h3>Datos</h3>
+              <hr/>
+              <p>
+                <mat-icon aria-label="telefono">phone</mat-icon>
+                0984960906
+              </p>
+              <p>
+                <mat-icon>home</mat-icon>
+                Cdla. Kenndy - Pana Norte
+              </p>
+              <p>
+                <mat-icon>mail</mat-icon>
+                pabloandres120297@gmail.com
+              </p>
+            </mat-card-footer>
+          </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="header">
+            <h1>Software Developer</h1>
             <hr/>
-            <p>
-              <mat-icon aria-label="telefono">phone</mat-icon>
-              0984960906
-            </p>
-            <p>
-              <mat-icon>home</mat-icon>
-              Cdla. Kenndy - Pana Norte
-            </p>
-            <p>
-              <mat-icon>mail</mat-icon>
-              pabloandres120297@gmail.com
-            </p>
-          </mat-card-footer>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <div class="header">
-          <h1>Software Developer</h1>
-          <hr/>
-          <h1>Front-End Developer</h1>
-          <section>
-            <button mat-button (click)="downloadFile()">Descargar CV</button>
-            <button (click)="openDialog()" mat-stroked-button>Sobre mí</button>
-          </section>
-        </div>
-      </mat-grid-tile>
+            <h1>Front-End Developer</h1>
+            <section>
+              <button mat-button (click)="downloadFile()">Descargar CV</button>
+              <button (click)="openDialog()" mat-stroked-button>Sobre mí</button>
+            </section>
+          </div>
+        </mat-grid-tile>
+      </div>
     </mat-grid-list>
   </mat-grid-list>
-  <mat-grid-list  cols="4" rowHeight="250px">
+  <mat-grid-list  [cols]="colTecnologias" [rowHeight]="rowHeightTecnologias">
     <p class="tech-titulo">Tecnologías</p>
     <mat-grid-tile *ngFor="let tecnologia of tecnologias">
       <div class="tech" >
@@ -52,7 +54,7 @@
       </div>
       </mat-grid-tile>
   </mat-grid-list>
-  <mat-grid-list class="proyects" cols="3" rowHeight="450px">
+  <mat-grid-list class="proyects" [cols]="colProyectos" [rowHeight]="rowHeightProyectos">
     <p class="proyects-titulo">Proyectos</p>
     <mat-grid-tile *ngFor="let proyecto of proyectos">
       <div class="proyects" >
@@ -72,7 +74,7 @@
       </div>
       </mat-grid-tile>
   </mat-grid-list>
-  <mat-grid-list class="contact" cols="1" rowHeight="500px">
+  <mat-grid-list class="contact" [cols]="colContacto" [rowHeight]="rowHeightContacto">
     <p class="contact-titulo">Contacteme</p>
     <p style="color: white;">* Campos obligatorios</p>
     <form (ngSubmit)="submitForm($event)" #forma="ngForm" class="contact-form">

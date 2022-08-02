@@ -15,7 +15,7 @@
   border-radius: 5px;
   border-color: white;
   margin-top: 30px;
-  width: 50%;
+  width: 50ppx;
 }
 
 mat-card-footer > h3 {
@@ -84,7 +84,7 @@ mat-grid-list .tech-titulo {
   border-radius: 10px;
   border-color: white;
   margin-top: 30px;
-  width: 100%;
+  width: 100px;
 }
 
 .img-tech {

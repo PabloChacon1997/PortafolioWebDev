@@ -37,7 +37,7 @@ export class AppComponent implements  OnInit, OnDestroy{
       console.log(result[0].mqAlias);
       result[0].mqAlias === 'md' ? this.getDefaultLayout(): null;
       result[0].mqAlias === 'sm' ? this.getSmLayout(): null;
-      result[0].mqAlias === 'lg' ? this.getSmLayout(): null;
+      result[0].mqAlias === 'lg' ? this.getDefaultLayout(): null;
       result[0].mqAlias === 'xs' ? this.getXsLayout(): null;
     })
   }
@@ -157,7 +157,7 @@ export class AppComponent implements  OnInit, OnDestroy{
       nombre: 'Web de Bienes Raices',
       imagen: '',
       urlGithub: 'https://github.com/PabloChacon1997/php_mvc_web',
-      descripcion: 'Aplicación web de compra y venta para el mantenimiento de bienes raices'
+      descripcion: 'Aplicación web para el mantenimiento de bienes raices'
     },
   ];
 

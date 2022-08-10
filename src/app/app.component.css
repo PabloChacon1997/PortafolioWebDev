@@ -58,6 +58,22 @@ mat-card-footer > p{
   margin-top: 100px;
 }
 
+
+@media (max-width: 600px) {
+  .header > section {
+    display: grid;
+    justify-content: inherit;
+    margin-top: 100px;
+  }
+
+  .header > section > button {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+  }
+}
+
 .header > section > button {
   font-size: 1.5rem;
   padding: 10px;

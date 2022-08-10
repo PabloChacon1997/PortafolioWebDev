@@ -34,7 +34,6 @@ export class AppComponent implements  OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.mediaSub = this.mediaObserver.asObservable().subscribe((result: MediaChange[]) => {
-      console.log(result[0].mqAlias);
       result[0].mqAlias === 'md' ? this.getDefaultLayout(): null;
       result[0].mqAlias === 'sm' ? this.getSmLayout(): null;
       result[0].mqAlias === 'lg' ? this.getDefaultLayout(): null;
@@ -71,7 +70,7 @@ export class AppComponent implements  OnInit, OnDestroy{
 
   getXsLayout() {
     this.colCabecera = 1;
-    this.rowHeightCabecera = '900px';
+    this.rowHeightCabecera = '950px';
     this.colSubCabecera = 1;
     this.rowHeightSubCabecera;
     this.colTecnologias = 2;
@@ -142,22 +141,25 @@ export class AppComponent implements  OnInit, OnDestroy{
 
   proyectos: Jobs[] = [
     {
-      nombre: 'Hospital Administración',
-      imagen: '',
-      urlGithub: 'https://github.com/PabloChacon1997/angular-adv-adminpro',
-      descripcion: 'Aplicación web para mantenimientos de hospitales'
+      nombre: 'Web Ventas-Clientes',
+      imagen: 'Captura.PNG',
+      urlGithub: 'https://github.com/PabloChacon1997/spring-boot-jpa.git',
+      linkWeb: 'https://clientes-springboot2-heroku.herokuapp.com/',
+      descripcion: 'Aplicación web para mantenimiento de Ventas y Clientes con facturación de ventas. Desarrollada en SpringBoot Framework y MySQL.'
     },
     {
-      nombre: 'CRM',
-      imagen: '',
-      urlGithub: 'https://github.com/PabloChacon1997/CRMGraphQL',
-      descripcion: 'Aplicación web para mantenimientos de pacientes'
+      nombre: 'Web Clientes',
+      imagen: 'Captura2.PNG',
+      urlGithub: 'https://github.com/PabloChacon1997/client-app-frontend.git',
+      linkWeb: 'https://appclients.netlify.app/#/clientes',
+      descripcion: 'Aplicación web para mantenimientos de Clientes usando Bootstrap. Desarrollado en Angular como Front-end y SpringBoot como Backend.'
     },
     {
-      nombre: 'Web de Bienes Raices',
-      imagen: '',
-      urlGithub: 'https://github.com/PabloChacon1997/php_mvc_web',
-      descripcion: 'Aplicación web para el mantenimiento de bienes raices'
+      nombre: 'OpenJira App',
+      imagen: 'Captura3.PNG',
+      urlGithub: 'https://github.com/PabloChacon1997/OpenJira-Next.git',
+      linkWeb: 'https://open-jira-next-nine.vercel.app/',
+      descripcion: 'Aplicación web para el manejo de tareas clasificandolas según se esten llevando acabo. Proyecto desarrollado con Nextjs y con Material UI.'
     },
   ];
 

@@ -19,8 +19,10 @@
                 Cdla. Kenndy - Pana Norte
               </p>
               <p>
-                <mat-icon>mail</mat-icon>
-                pabloandres120297@gmail.com
+                <i class="fa fa-github" style="font-size:24px"></i>
+                <a 
+                  style="text-decoration: none;color: white;margin-left: 8px;" 
+                  href="https://github.com/PabloChacon1997">PabloChacon1997</a>
               </p>
             </mat-card-footer>
           </mat-card>
@@ -31,7 +33,7 @@
             <hr/>
             <h1>Front-End Developer</h1>
             <section>
-              <button mat-button (click)="downloadFile()">Descargar CV</button>
+              <button style="background-color: #2b3038;" mat-button (click)="downloadFile()">Descargar CV</button>
               <button (click)="openDialog()" mat-stroked-button>Sobre mí</button>
             </section>
           </div>
@@ -61,14 +63,24 @@
         <mat-card class="card-proyects">
           <mat-card-header class="card-header-proyect">
             <h3>{{ proyecto.nombre }}</h3>
+            <p *ngIf="proyecto.linkWeb">
+              <a [href]="proyecto.linkWeb" target="_blank">
+                <mat-icon style="color: white;">launch</mat-icon>
+              </a>
+            </p>
           </mat-card-header>
           <mat-card-content>
-            <img class="img-proyects" src='../assets/img/CV_imagen.jpeg' alt="Foto Presentación" />
+            <img class="img-proyects" [src]='"../assets/screenshot/"+ proyecto.imagen' alt="Foto Presentación" />
           </mat-card-content>
           <mat-card-footer>
             <p>{{ proyecto.descripcion }}</p>
             <hr>
-            <p><a [href]="proyecto.urlGithub">Gihub</a></p>
+            <p>
+              <a [href]="proyecto.urlGithub" target="_blank">
+                <i class="fa fa-github" style="font-size:24px"></i>
+              </a>
+            </p>
+            
           </mat-card-footer>
         </mat-card>
       </div>
